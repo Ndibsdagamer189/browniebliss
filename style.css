@@ -1,0 +1,133 @@
+/* style.css */
+:root {
+  --main-red: #ff3b3f;
+  --light-red: #ff5b5f;
+  --dark-brown: #2d0e0b;
+  --white: #ffffff;
+  --font: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--main-red);
+  color: var(--dark-brown);
+}
+
+header {
+  background-color: var(--dark-brown);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+nav {
+  background-color: var(--light-red);
+}
+
+.dropdown-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--dark-brown);
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--light-red);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+section {
+  background-color: var(--white);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 960px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--main-red);
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: var(--dark-brown);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+
+  .dropdown-menu a {
+    padding: 1rem;
+  }
+}
